@@ -5,7 +5,8 @@
   "description": "elector demo",
   "main": "./app/main/electron.js",
   "scripts": {
-    "start:main": "electron ./app/main/electron.js"
+    "start:main": "webpack --config ./webpack/webpack.main.dev.js && electron ./dist/electron.js",
+    "start:render": "webpack-dev-server --config ./webpack/webpack.render.dev.js"
   },
   "dependencies": {
     "electron": "^11.1.1",
